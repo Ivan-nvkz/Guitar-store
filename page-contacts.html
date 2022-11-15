@@ -13,6 +13,9 @@
       href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Doppio+One&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin="" />
    <link rel="stylesheet" href="css/swiper-bundle.min.css">
    <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -94,6 +97,9 @@
                            <input class="join-form__input training-form__input" type="text" placeholder="Ваше имя ... ">
                            <input class="join-form__input training-form__input" type="tel"
                               placeholder="Ваш телефон ... ">
+                           <a class="join__form-politics training__form-politics" href="page-privacy-policy.html">
+                              Я даю согласие на обработку своих персональных данных
+                           </a>
                            <button type="submit" class="training__btn">записаться</button>
                         </div>
                      </form>
@@ -341,6 +347,53 @@
                   </h2>
                </div>
                <div class="page-contacts__inner">
+                  <div class="map__block">
+                     <p class="page-contacts__title">
+                        Как с нами связаться?
+                     </p>
+                     <p class="page-contacts__info">
+                        Наши мастера очень хотят вам помочь и ответить на все ваши вопросы. <br>
+                        Если вы не хотите ждать, попробуйте поискать ответ на ваш вопрос в списке ниже. Спасибо за
+                        понимание!
+                     </p>
+                     <div class="map__block-inner">
+                        <div class="map-box">
+                           <div id="map-contacts"></div>
+                        </div>
+                        <div class="map-contacts__info">
+                           <p class="map-contacts__address ">
+                              <svg class="map-address__img" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM7 9C7 6.24 9.24 4 12 4C14.76 4 17 6.24 17 9C17 11.88 14.12 16.19 12 18.88C9.92 16.21 7 11.85 7 9ZM9.5 9C9.5 7.61929 10.6193 6.5 12 6.5C12.8932 6.5 13.7185 6.9765 14.1651 7.75C14.6116 8.5235 14.6116 9.4765 14.1651 10.25C13.7185 11.0235 12.8932 11.5 12 11.5C10.6193 11.5 9.5 10.3807 9.5 9Z"
+                                    fill="#fff" />
+                              </svg>
+                              Санкт-Петербург Московский проспект 3 ТЦ Адмиралтейский
+                           </p>
+                           <p class="map-contacts__phone-box">
+                              <svg class="map-phone__img" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79C8.06 13.62 10.38 15.93 13.21 17.38L15.41 15.18C15.61 14.99 15.86 14.89 16.12 14.89C16.22 14.89 16.33 14.9 16.43 14.94C17.55 15.31 18.76 15.51 20 15.51C20.55 15.51 21 15.96 21 16.51V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3ZM6.54 5C6.6 5.89 6.75 6.76 6.99 7.59L5.79 8.79C5.38 7.59 5.12 6.32 5.03 5H6.54ZM16.4 17.02C17.25 17.26 18.12 17.41 19 17.47V18.96C17.68 18.87 16.41 18.61 15.2 18.21L16.4 17.02Z"
+                                    fill="#fff" />
+                              </svg>
+                              Звонок
+                              <a class="map-contacts__phone" href="tel:88000000000">8 (800) 000 00 00</a>
+                           </p>
+                           <p class="map-contacts__mail-box">
+                              <svg class="map-mail__img" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6ZM20 6L12 10.99L4 6H20ZM12 13L4 8V18H20V8L12 13Z"
+                                    fill="#fff" />
+                              </svg>
+                              Почта
+                              <a class="map-contacts__mail" href="mailto:info@guitarstore.ru">info@guitarstore.ru
+                              </a>
+                           </p>
+                        </div>
+                     </div>
+                  </div>
 
                </div>
             </div>
@@ -552,7 +605,7 @@
                            <p class="footer__copy">
                               © 2022 GuitarStore - магазин музыкальных инструментов
                            </p>
-                           <a class="privacy-policy__link" href="#">
+                           <a class="privacy-policy__link" href="page-privacy-policy.html">
                               Политика конфиденциальности
                            </a>
                         </div>
@@ -614,6 +667,7 @@
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
    <script src="js/swiper-bundle.min.js"></script>
    <script src="js/hystmodal.min.js"></script>
    <script src="js/main.min.js"></script>
